@@ -1,0 +1,399 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		77D3E85F2B54DE5F00DEAC1E /* MooCalTestAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D3E85E2B54DE5F00DEAC1E /* MooCalTestAppApp.swift */; };
+		77D3E8612B54DE5F00DEAC1E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D3E8602B54DE5F00DEAC1E /* ContentView.swift */; };
+		77D3E8632B54DE6200DEAC1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77D3E8622B54DE6200DEAC1E /* Assets.xcassets */; };
+		77D3E8662B54DE6200DEAC1E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77D3E8652B54DE6200DEAC1E /* Preview Assets.xcassets */; };
+		77D3E8702B54E06700DEAC1E /* MooCal in Frameworks */ = {isa = PBXBuildFile; productRef = 77D3E86F2B54E06700DEAC1E /* MooCal */; };
+		77D3E8732B54E11600DEAC1E /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D3E8722B54E11600DEAC1E /* Event.swift */; };
+		77D3E8762B54E13900DEAC1E /* EventInputSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D3E8752B54E13900DEAC1E /* EventInputSheet.swift */; };
+		77D3E8782B54E16B00DEAC1E /* DayEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D3E8772B54E16B00DEAC1E /* DayEventView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		77D3E85B2B54DE5F00DEAC1E /* MooCalTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MooCalTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		77D3E85E2B54DE5F00DEAC1E /* MooCalTestAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MooCalTestAppApp.swift; sourceTree = "<group>"; };
+		77D3E8602B54DE5F00DEAC1E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		77D3E8622B54DE6200DEAC1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		77D3E8652B54DE6200DEAC1E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		77D3E86C2B54DF2E00DEAC1E /* MooCal */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = MooCal; path = ../..; sourceTree = "<group>"; };
+		77D3E8722B54E11600DEAC1E /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		77D3E8752B54E13900DEAC1E /* EventInputSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventInputSheet.swift; sourceTree = "<group>"; };
+		77D3E8772B54E16B00DEAC1E /* DayEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayEventView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		77D3E8582B54DE5F00DEAC1E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77D3E8702B54E06700DEAC1E /* MooCal in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		77D3E8522B54DE5F00DEAC1E = {
+			isa = PBXGroup;
+			children = (
+				77D3E86C2B54DF2E00DEAC1E /* MooCal */,
+				77D3E85D2B54DE5F00DEAC1E /* MooCalTestApp */,
+				77D3E85C2B54DE5F00DEAC1E /* Products */,
+				77D3E86E2B54E06700DEAC1E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		77D3E85C2B54DE5F00DEAC1E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				77D3E85B2B54DE5F00DEAC1E /* MooCalTestApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		77D3E85D2B54DE5F00DEAC1E /* MooCalTestApp */ = {
+			isa = PBXGroup;
+			children = (
+				77D3E8742B54E12A00DEAC1E /* Views */,
+				77D3E8712B54E10B00DEAC1E /* DataModels */,
+				77D3E85E2B54DE5F00DEAC1E /* MooCalTestAppApp.swift */,
+				77D3E8602B54DE5F00DEAC1E /* ContentView.swift */,
+				77D3E8622B54DE6200DEAC1E /* Assets.xcassets */,
+				77D3E8642B54DE6200DEAC1E /* Preview Content */,
+			);
+			path = MooCalTestApp;
+			sourceTree = "<group>";
+		};
+		77D3E8642B54DE6200DEAC1E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				77D3E8652B54DE6200DEAC1E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		77D3E86E2B54E06700DEAC1E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		77D3E8712B54E10B00DEAC1E /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				77D3E8722B54E11600DEAC1E /* Event.swift */,
+			);
+			path = DataModels;
+			sourceTree = "<group>";
+		};
+		77D3E8742B54E12A00DEAC1E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				77D3E8752B54E13900DEAC1E /* EventInputSheet.swift */,
+				77D3E8772B54E16B00DEAC1E /* DayEventView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		77D3E85A2B54DE5F00DEAC1E /* MooCalTestApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77D3E8692B54DE6200DEAC1E /* Build configuration list for PBXNativeTarget "MooCalTestApp" */;
+			buildPhases = (
+				77D3E8572B54DE5F00DEAC1E /* Sources */,
+				77D3E8582B54DE5F00DEAC1E /* Frameworks */,
+				77D3E8592B54DE5F00DEAC1E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MooCalTestApp;
+			packageProductDependencies = (
+				77D3E86F2B54E06700DEAC1E /* MooCal */,
+			);
+			productName = MooCalTestApp;
+			productReference = 77D3E85B2B54DE5F00DEAC1E /* MooCalTestApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		77D3E8532B54DE5F00DEAC1E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					77D3E85A2B54DE5F00DEAC1E = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = 77D3E8562B54DE5F00DEAC1E /* Build configuration list for PBXProject "MooCalTestApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 77D3E8522B54DE5F00DEAC1E;
+			productRefGroup = 77D3E85C2B54DE5F00DEAC1E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				77D3E85A2B54DE5F00DEAC1E /* MooCalTestApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		77D3E8592B54DE5F00DEAC1E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77D3E8662B54DE6200DEAC1E /* Preview Assets.xcassets in Resources */,
+				77D3E8632B54DE6200DEAC1E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		77D3E8572B54DE5F00DEAC1E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77D3E8612B54DE5F00DEAC1E /* ContentView.swift in Sources */,
+				77D3E8732B54E11600DEAC1E /* Event.swift in Sources */,
+				77D3E85F2B54DE5F00DEAC1E /* MooCalTestAppApp.swift in Sources */,
+				77D3E8762B54E13900DEAC1E /* EventInputSheet.swift in Sources */,
+				77D3E8782B54E16B00DEAC1E /* DayEventView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		77D3E8672B54DE6200DEAC1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		77D3E8682B54DE6200DEAC1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		77D3E86A2B54DE6200DEAC1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MooCalTestApp/Preview Content\"";
+				DEVELOPMENT_TEAM = KPK2BX5PW8;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mayhem.MooCalTestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		77D3E86B2B54DE6200DEAC1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MooCalTestApp/Preview Content\"";
+				DEVELOPMENT_TEAM = KPK2BX5PW8;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mayhem.MooCalTestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		77D3E8562B54DE5F00DEAC1E /* Build configuration list for PBXProject "MooCalTestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77D3E8672B54DE6200DEAC1E /* Debug */,
+				77D3E8682B54DE6200DEAC1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		77D3E8692B54DE6200DEAC1E /* Build configuration list for PBXNativeTarget "MooCalTestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77D3E86A2B54DE6200DEAC1E /* Debug */,
+				77D3E86B2B54DE6200DEAC1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		77D3E86F2B54E06700DEAC1E /* MooCal */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MooCal;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 77D3E8532B54DE5F00DEAC1E /* Project object */;
+}
