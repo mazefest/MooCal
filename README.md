@@ -1,8 +1,9 @@
+<p align="center">
 <img src="ReadMeResources/MooCalLogo.png" width="300" alt="">
+</p>
+Moocal is a lightweight SwiftUI calendar library designed to simplify the creation and customization of calendars in your SwiftUI applications. Whether you're building a productivity app, an event planner, or any application that requires calendar functionality, Moocal is your go-to solution.
 
-Welcome to Moocal, a lightweight SwiftUI calendar library designed to simplify the creation and customization of calendars in your SwiftUI applications. Whether you're building a productivity app, an event planner, or any application that requires calendar functionality, Moocal is your go-to solution.
-
-## Requirement
+## Requirements
 
 | Platforms    | Minimum Swift Version |
 |--------------|-----------------------|
