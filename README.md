@@ -1,7 +1,7 @@
 <p align="center">
 <img src="ReadMeResources/MooCalLogo.png" width="300" alt="">
 </p>
-Moocal is a lightweight SwiftUI calendar library designed to simplify the creation and customization of calendars in your SwiftUI applications. Whether you're building a productivity app, an event planner, or any application that requires calendar functionality, Moocal is your go-to solution.
+Moocal is a lightweight SwiftUI calendar library designed to simplify the creation and customization of calendars in your SwiftUI applications. Whether you're building a productivity app, an event planner, or any application that requires calendar functionality, Moocal is your go-to solution. If you want to see an example app using MooCal, see our test app [HERE](https://github.com/mazefest/MooCal/wiki/Accessing-the-Test-App)
 
 # Requirements
 
@@ -125,3 +125,8 @@ If you want to add more functionality to your calendar, make sure to take a look
 
 * [Responding To Day Selection](https://github.com/mazefest/MooCal/wiki/Further-Implementation#responding-to-day-selection)
 * [Auto Scrolling To Current Month](https://github.com/mazefest/MooCal/wiki/Further-Implementation#auto-scrolling-to-current-month)
+
+# Test App
+For full examples of implementing a full calendar app, see the test app below.
+
+[Access Test App](https://github.com/mazefest/MooCal/wiki/Accessing-the-Test-App)
