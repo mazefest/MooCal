@@ -3,14 +3,21 @@
 </p>
 Moocal is a lightweight SwiftUI calendar library designed to simplify the creation and customization of calendars in your SwiftUI applications. Whether you're building a productivity app, an event planner, or any application that requires calendar functionality, Moocal is your go-to solution.
 
-## Requirements
+# Requirements
 
 | Platforms    | Minimum Swift Version |
 |--------------|-----------------------|
 | iOS 16+      | 5.9                   |
 
-## Getting Started
-[Swift package manager and cocoa pod instructions here]
+# Getting Started
+
+### Swift Package Manager
+1. in XCode go to `File` -> `Add Package Dependencies...`
+<img src="ReadMeResources/Integration/SPM_Instructions_1.png" width="300" alt="">
+2. In the searchbar paste the github url `https://github.com/mazefest/MooCal` and select `Add Package`.
+<img src="ReadMeResources/Integration/SPM_Instructions_2.png" width="300" alt="">
+
+Now you can import MooCal and use the library where ever you like.
 
 ## Integration
 
@@ -110,7 +117,7 @@ This will be the result of the above code.
 
 <img src="ReadMeResources/Gif_CustomCalendar_Scroll.gif" width="200" alt="">
 
-## Further Implementation
+# Further Implementation
 If you want to add more functionality to your calendar, make sure to take a look at our Wiki, there is a lot more functionality you can add very easily.
 
 * [Responding To Day Selection](https://github.com/mazefest/MooCal/wiki/Further-Implementation#responding-to-day-selection)
