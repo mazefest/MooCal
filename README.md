@@ -13,13 +13,16 @@ Moocal is a lightweight SwiftUI calendar library designed to simplify the creati
 
 ### Swift Package Manager
 1. in XCode go to `File` -> `Add Package Dependencies...`
+
 <img src="ReadMeResources/Integration/SPM_Instructions_1.png" width="300" alt="">
+
 2. In the searchbar paste the github url `https://github.com/mazefest/MooCal` and select `Add Package`.
-<img src="ReadMeResources/Integration/SPM_Instructions_2.png" width="300" alt="">
+   
+<img src="ReadMeResources/Integration/SPM_Instructions_2.png" width="500" alt="">
 
 Now you can import MooCal and use the library where ever you like.
 
-## Integration
+# Integration
 
 ### 1. Import MooCal
 
