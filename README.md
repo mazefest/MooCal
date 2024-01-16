@@ -3,9 +3,9 @@
 </p>
 
 <p align="center">
-<img src="ReadMeResources/TestApp/Gif_TestApp_1.png" width="300" alt="">
-<img src="ReadMeResources/TestApp/Gif_TestApp_2.png" width="300" alt="">
-<img src="ReadMeResources/TestApp/Gif_TestApp_3.png" width="300" alt="">
+<img src="ReadMeResources/TestApp/Gif_TestApp_1.gif" width="300" alt="">
+<img src="ReadMeResources/TestApp/Gif_TestApp_2.gif" width="300" alt="">
+<img src="ReadMeResources/TestApp/Gif_TestApp_3.gif" width="300" alt="">
 </p>
 Moocal is a lightweight SwiftUI calendar library designed to simplify the creation and customization of calendars in your SwiftUI applications. Whether you're building a productivity app, an event planner, or any application that requires calendar functionality, Moocal is your go-to solution. If you want to see an example app using MooCal, see our test app.
 
