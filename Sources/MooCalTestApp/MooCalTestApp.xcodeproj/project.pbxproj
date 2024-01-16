@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		778C95BA2B562BA2008A151C /* ContentViewTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778C95B92B562BA2008A151C /* ContentViewTwo.swift */; };
+		778C95BC2B562D8D008A151C /* ContentViewThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778C95BB2B562D8D008A151C /* ContentViewThree.swift */; };
 		77D3E85F2B54DE5F00DEAC1E /* MooCalTestAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D3E85E2B54DE5F00DEAC1E /* MooCalTestAppApp.swift */; };
 		77D3E8612B54DE5F00DEAC1E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D3E8602B54DE5F00DEAC1E /* ContentView.swift */; };
 		77D3E8632B54DE6200DEAC1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77D3E8622B54DE6200DEAC1E /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		778C95B92B562BA2008A151C /* ContentViewTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewTwo.swift; sourceTree = "<group>"; };
+		778C95BB2B562D8D008A151C /* ContentViewThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewThree.swift; sourceTree = "<group>"; };
 		77D3E85B2B54DE5F00DEAC1E /* MooCalTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MooCalTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77D3E85E2B54DE5F00DEAC1E /* MooCalTestAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MooCalTestAppApp.swift; sourceTree = "<group>"; };
 		77D3E8602B54DE5F00DEAC1E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,6 +69,8 @@
 				77D3E8742B54E12A00DEAC1E /* Views */,
 				77D3E8712B54E10B00DEAC1E /* DataModels */,
 				77D3E85E2B54DE5F00DEAC1E /* MooCalTestAppApp.swift */,
+				778C95BB2B562D8D008A151C /* ContentViewThree.swift */,
+				778C95B92B562BA2008A151C /* ContentViewTwo.swift */,
 				77D3E8602B54DE5F00DEAC1E /* ContentView.swift */,
 				77D3E8622B54DE6200DEAC1E /* Assets.xcassets */,
 				77D3E8642B54DE6200DEAC1E /* Preview Content */,
@@ -180,8 +186,10 @@
 				77D3E8612B54DE5F00DEAC1E /* ContentView.swift in Sources */,
 				77D3E8732B54E11600DEAC1E /* Event.swift in Sources */,
 				77D3E85F2B54DE5F00DEAC1E /* MooCalTestAppApp.swift in Sources */,
+				778C95BA2B562BA2008A151C /* ContentViewTwo.swift in Sources */,
 				77D3E8762B54E13900DEAC1E /* EventInputSheet.swift in Sources */,
 				77D3E8782B54E16B00DEAC1E /* DayEventView.swift in Sources */,
+				778C95BC2B562D8D008A151C /* ContentViewThree.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

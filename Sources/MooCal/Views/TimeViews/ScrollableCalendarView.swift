@@ -14,7 +14,7 @@ public struct ScrollableCalendarView<CustomView: View>: View {
     public var calendarDayView: CalendarDayView<CustomView>
     public var onSelection: ((CalendarDay) -> ())?
     
-    public init(viewModel: ScrollableCalendarViewViewModel, calendarDayView: CalendarDayView<CustomView>, onSelection: ( (CalendarDay) -> Void)? = nil) {
+    public init(viewModel: ScrollableCalendarViewViewModel = ScrollableCalendarViewViewModel(), calendarDayView: CalendarDayView<CustomView>, onSelection: ( (CalendarDay) -> Void)? = nil) {
         self.viewModel = viewModel
         self.calendarDayView = calendarDayView
         self.onSelection = onSelection
