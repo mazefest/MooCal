@@ -25,6 +25,13 @@ struct MooCalTestAppApp: App {
                 .tabItem {
                     Image(systemName: "2.circle.fill")
                 }
+                
+                NavigationView {
+                    ContentViewThree()
+                }
+                .tabItem {
+                    Image(systemName: "3.circle.fill")
+                }
             }
             
         }

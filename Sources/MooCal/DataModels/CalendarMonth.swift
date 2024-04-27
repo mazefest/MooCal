@@ -16,6 +16,10 @@ public struct CalendarMonth {
         startDate.descriptor(.month)
     }
     
+    public var year: String {
+        startDate.descriptor(.year)
+    }
+    
     public var startOfMonthOffset: Int {
         return startDate.monthStartOffset()
     }

@@ -7,29 +7,39 @@
 
 import SwiftUI
 
-//@available(iOS 16.0, *)
-public struct CalendarMonthView<CustomView: View>: View {
+public struct CalendarMonthView<CustomView: View, HeaderView: View>: View {
     public var calendarMonth: CalendarMonth
+    public var calendarHeaderView: CalendarMonthHeaderView<HeaderView> // rename to calendarMonthHeaderView
     public var calendarDayView: CalendarDayView<CustomView>
     public var onSelection: ((CalendarDay) -> ())?
     
-    public init(calendarMonth: CalendarMonth, calendarDayView: CalendarDayView<CustomView>, onSelection: ( (CalendarDay) -> Void)? = nil) {
+    public init(calendarMonth: CalendarMonth, calendarHeaderView: CalendarMonthHeaderView<HeaderView>, calendarDayView: CalendarDayView<CustomView>, onSelection: ( (CalendarDay) -> Void)? = nil) {
         self.calendarMonth = calendarMonth
+        self.calendarHeaderView = calendarHeaderView
         self.calendarDayView = calendarDayView
         self.onSelection = onSelection
     }
 
     public var body: some View {
             VStack(spacing: 0.0) {
-                title
+                headerView
                 daysView
                     .padding()
             }
     }
     
-    private var title: some View {
-        Text(calendarMonth.title)
-            .bold()
+    @ViewBuilder
+    private var headerView: some View {
+        switch calendarHeaderView {
+        case .custom(let customHeaderView):
+            customHeaderView(calendarMonth)
+        case .monthLabel:
+            Text(calendarMonth.title)
+                .bold()
+        case .monthYearLabel:
+            Text("\(calendarMonth.title) \(calendarMonth.year)")
+                .bold()
+        }
     }
     
     private var daysOfWeek: some View {

@@ -18,6 +18,10 @@ struct ContentViewThree: View {
         ScrollViewReader { proxy in
             ScrollableCalendarView(
                 viewModel: viewModel,
+                calendarHeaderView: .custom({ calendarMonth in
+                    Text("\(calendarMonth.title) \(calendarMonth.year)")
+                        .font(.system(.body, design: .rounded, weight: .bold))
+                }),
                 calendarDayView: .custom({ calendarDay in
                     customCalendarDayView(calendarDay)
                 }),
@@ -154,11 +158,4 @@ extension ContentViewThree {
     NavigationView {
         ContentViewThree()
     }
-}
-
-
-
-
-#Preview {
-    ContentViewThree()
 }

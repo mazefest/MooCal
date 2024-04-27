@@ -7,15 +7,16 @@
 
 import SwiftUI
 
-//@available(iOS 16.4, *)
-public struct ScrollableCalendarView<CustomView: View>: View {
+public struct ScrollableCalendarView<CustomView: View, HeaderView: View>: View {
     @ObservedObject var viewModel: ScrollableCalendarViewViewModel
     
+    public var calendarHeaderView: CalendarMonthHeaderView<HeaderView>
     public var calendarDayView: CalendarDayView<CustomView>
     public var onSelection: ((CalendarDay) -> ())?
     
-    public init(viewModel: ScrollableCalendarViewViewModel = ScrollableCalendarViewViewModel(), calendarDayView: CalendarDayView<CustomView>, onSelection: ( (CalendarDay) -> Void)? = nil) {
+    public init(viewModel: ScrollableCalendarViewViewModel = ScrollableCalendarViewViewModel(), calendarHeaderView: CalendarMonthHeaderView<HeaderView> = .monthLabel(), calendarDayView: CalendarDayView<CustomView>, onSelection: ( (CalendarDay) -> Void)? = nil) {
         self.viewModel = viewModel
+        self.calendarHeaderView = calendarHeaderView
         self.calendarDayView = calendarDayView
         self.onSelection = onSelection
     }
@@ -44,8 +45,9 @@ public struct ScrollableCalendarView<CustomView: View>: View {
                 .listRowBackground(Color.clear)
                 .padding(.vertical, 20)
                 
-                CalendarYearViewMoo<CustomView>(
+                CalendarYearViewMoo(
                     calendarMonths: viewModel.calendarMonths,
+                    calendarHeaderView: calendarHeaderView,
                     calendarDayView: calendarDayView,
                     onSelection: onSelection
                 )
