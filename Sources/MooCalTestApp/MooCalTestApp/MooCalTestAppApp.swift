@@ -11,9 +11,22 @@ import SwiftUI
 struct MooCalTestAppApp: App {
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                ContentView()
+            TabView {
+                NavigationView {
+                    ContentView()
+                }
+                .tabItem {
+                    Image(systemName: "1.circle.fill")
+                }
+                
+                NavigationView {
+                    ContentViewTwo()
+                }
+                .tabItem {
+                    Image(systemName: "2.circle.fill")
+                }
             }
+            
         }
     }
 }
