@@ -114,6 +114,22 @@ public class ScrollableCalendarViewViewModel: ObservableObject {
         }
     }
     
+    public func addMonth(_ action: MonthAction, data: [CalendarData]) {
+        guard let month = action.calendarMonthForIncrementing(calendarMonths: calendarMonths) else {
+            return
+        }
+        let date = month.startDate
+        let newDate = date.modified(by: action.incrementor, component: .month)
+        let newMonth = CalendarMonth.createCalendarMonth(fromMonthStartDate: newDate, data: data)
+        
+        switch action {
+        case .toBeginning:
+            self.calendarMonths.insert(newMonth, at: 0)
+        case .toEnd:
+            self.calendarMonths.append(newMonth)
+        }
+    }
+    
     public enum MonthAction {
         case toBeginning
         case toEnd

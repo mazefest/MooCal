@@ -35,7 +35,9 @@ struct ContentView: View {
                         proxy.scrollTo(currentMonthId)
                     }, label: {
                         Text("Today")
+                            .bold()
                     })
+                    .tint(.orange)
                 }
                 
                 ToolbarItem(placement: .confirmationAction) {
@@ -44,6 +46,7 @@ struct ContentView: View {
                     } label: {
                         Image(systemName: "plus.circle.fill")
                     }
+                    .tint(.orange)
                 }
             }
             .sheet(item: $sheetState, content: { sheetState in
@@ -60,11 +63,13 @@ struct ContentView: View {
     // Custom View
     private func customCalendarDayView(_ calendarDay: CalendarDay) -> some View {
         let events = events.filter({$0.date.isInDay(calendarDay.date)})
+        let isToday = calendarDay.date.isToday
         
         return ZStack {
             RoundedRectangle(cornerRadius: 10.0)
-                .foregroundStyle((calendarDay.date.isToday) ? Color.green.opacity(0.33) : Color.blue.opacity(0.13))
+                .foregroundStyle((isToday) ? Color.orange : Color.cyan)
             Text(calendarDay.descriptor) // The day number. ex: 11
+                .foregroundStyle(.black)
                 .bold()
         }
         .aspectRatio(contentMode: .fit)
@@ -74,7 +79,7 @@ struct ContentView: View {
                 HStack {
                     ForEach(events) { event in
                         Circle()
-                            .foregroundStyle(.orange)
+                            .foregroundStyle((isToday) ? .cyan : .orange)
                             .frame(width: 5.0, height: 5.0)
                     }
                     Spacer()
