@@ -12,10 +12,10 @@ public struct ScrollableCalendarView<CustomView: View, HeaderView: View, DayOfWe
     
     public var calendarHeaderView: CalendarMonthHeaderView<HeaderView>
     public var calendarDayView: CalendarDayView<CustomView>
-    public var calendarDayOfWeekInidcatorView: CalendarColumnDayOfWeekIndicatorView<DayOfWeekIndicatorView>
+    public var calendarDayOfWeekInidcatorView: CalendarDayOfWeekIndicatorView<DayOfWeekIndicatorView>
     public var onSelection: ((CalendarDay) -> ())?
     
-    public init(viewModel: ScrollableCalendarViewViewModel = ScrollableCalendarViewViewModel(), calendarHeaderView: CalendarMonthHeaderView<HeaderView> = .monthLabel(), calendarDayView: CalendarDayView<CustomView>, calendarDayOfWeekInidcatorView: CalendarColumnDayOfWeekIndicatorView<DayOfWeekIndicatorView> = .singleLetter, onSelection: ( (CalendarDay) -> Void)? = nil) {
+    public init(viewModel: ScrollableCalendarViewViewModel = ScrollableCalendarViewViewModel(), calendarHeaderView: CalendarMonthHeaderView<HeaderView> = .monthLabel(), calendarDayView: CalendarDayView<CustomView>, calendarDayOfWeekInidcatorView: CalendarDayOfWeekIndicatorView<DayOfWeekIndicatorView> = .singleLetter(), onSelection: ( (CalendarDay) -> Void)? = nil) {
         self.viewModel = viewModel
         self.calendarHeaderView = calendarHeaderView
         self.calendarDayView = calendarDayView

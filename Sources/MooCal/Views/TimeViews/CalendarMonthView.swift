@@ -11,10 +11,10 @@ public struct CalendarMonthView<CustomView: View, HeaderView: View, DayOfWeekInd
     public var calendarMonth: CalendarMonth
     public var calendarHeaderView: CalendarMonthHeaderView<HeaderView>
     public var calendarDayView: CalendarDayView<CustomView>
-    public var calendarDayOfWeekInidcatorView: CalendarColumnDayOfWeekIndicatorView<DayOfWeekIndicatorView>
+    public var calendarDayOfWeekInidcatorView: CalendarDayOfWeekIndicatorView<DayOfWeekIndicatorView>
     public var onSelection: ((CalendarDay) -> ())?
     
-    public init(calendarMonth: CalendarMonth, calendarHeaderView: CalendarMonthHeaderView<HeaderView>, calendarDayView: CalendarDayView<CustomView>, calendarDayOfWeekInidcatorView: CalendarColumnDayOfWeekIndicatorView<DayOfWeekIndicatorView>, onSelection: ( (CalendarDay) -> Void)? = nil) {
+    public init(calendarMonth: CalendarMonth, calendarHeaderView: CalendarMonthHeaderView<HeaderView>, calendarDayView: CalendarDayView<CustomView>, calendarDayOfWeekInidcatorView: CalendarDayOfWeekIndicatorView<DayOfWeekIndicatorView>, onSelection: ( (CalendarDay) -> Void)? = nil) {
         self.calendarMonth = calendarMonth
         self.calendarHeaderView = calendarHeaderView
         self.calendarDayView = calendarDayView

@@ -21,7 +21,6 @@ public struct ClassicNumberedDayViewConfig {
         self.highlightColor = highlightColor
         self.cornerRadius = cornerRadius
     }
-
 }
 
 public struct ClassicNumberedDayView: View {
