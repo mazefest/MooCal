@@ -18,17 +18,14 @@ struct ContentViewThree: View {
         ScrollViewReader { proxy in
             ScrollableCalendarView(
                 viewModel: viewModel,
-                calendarHeaderView: .custom({ calendarMonth in
-                    Text("\(calendarMonth.title) \(calendarMonth.year)")
-                        .font(.system(.body, design: .rounded, weight: .bold))
-                }),
-                calendarDayView: .custom({ calendarDay in
+                calendarDayView: .custom(
+                    { calendarDay in
                     customCalendarDayView(calendarDay)
-                }),
-                onSelection: { calendarDay in
-                    let events = events.filter({$0.date.isInDay(calendarDay.date)}) // filter to events in calendar day
-                    sheetState = .events(calendarDay, events)
-                }
+                    }
+                ),
+                calendarDayOfWeekInidcatorView: .custom({ dayOfWeek in
+                    customDayOfWeekIndicatorView(dayOfWeek: dayOfWeek)
+                })
             )
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
@@ -64,17 +61,17 @@ struct ContentViewThree: View {
         }
     }
     
-    // Custom View
+    // Custom Day View
     private func customCalendarDayView(_ calendarDay: CalendarDay) -> some View {
         let events = events.filter({$0.date.isInDay(calendarDay.date)})
         let isToday = calendarDay.date.isToday
         
         return ZStack {
             Circle()
-                .foregroundStyle((isToday) ? Color.pink : Color.pink)
+                .foregroundStyle((isToday) ? Color.blue: Color.gray.opacity(0.33))
             Text(calendarDay.descriptor) // The day number. ex: 11
+                .font(.system(.body, design: .rounded, weight: .bold))
                 .foregroundStyle(.primary)
-                .bold()
         }
         .aspectRatio(contentMode: .fit)
         .overlay {
@@ -92,6 +89,17 @@ struct ContentViewThree: View {
             }
         }
     }
+    
+    // Custom Day Of Week Indicator View
+    private func customDayOfWeekIndicatorView(dayOfWeek: DayOfWeek) -> some View {
+        ZStack {
+            Color.gray.opacity(0.33)
+                .cornerRadius(5.0)
+            Text(dayOfWeek.abbreviated)
+                .font(.system(.body, design: .rounded, weight: .semibold))
+        }
+    }
+
     
     // View for inputting event info
     private func eventInputSheet() -> some View {
