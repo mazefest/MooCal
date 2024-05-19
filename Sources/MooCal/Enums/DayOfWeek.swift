@@ -26,6 +26,16 @@ public enum DayOfWeek: String, Identifiable {
         return self.rawValue.first?.uppercased() ?? ""
     }
     
+    /**
+        - Returns: returns abbreviated forms of the days of week. ex: 3 characters for all days of the week (mon, tue).
+     */
+    public var abbreviated: String {
+        switch self {
+        default:
+            return String(self.rawValue.capitalized.prefix(3))
+        }
+    }
+    
     public var offSet: Int {
         // if start of week is monday, else it would be same sequence but start from sunday
         switch self {

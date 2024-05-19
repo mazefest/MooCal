@@ -7,25 +7,27 @@
 
 import SwiftUI
 
-public struct CalendarMonthView<CustomView: View, HeaderView: View>: View {
+public struct CalendarMonthView<CustomView: View, HeaderView: View, DayOfWeekIndicatorView: View>: View {
     public var calendarMonth: CalendarMonth
-    public var calendarHeaderView: CalendarMonthHeaderView<HeaderView> // rename to calendarMonthHeaderView
+    public var calendarHeaderView: CalendarMonthHeaderView<HeaderView>
     public var calendarDayView: CalendarDayView<CustomView>
+    public var calendarDayOfWeekInidcatorView: CalendarColumnDayOfWeekIndicatorView<DayOfWeekIndicatorView>
     public var onSelection: ((CalendarDay) -> ())?
     
-    public init(calendarMonth: CalendarMonth, calendarHeaderView: CalendarMonthHeaderView<HeaderView>, calendarDayView: CalendarDayView<CustomView>, onSelection: ( (CalendarDay) -> Void)? = nil) {
+    public init(calendarMonth: CalendarMonth, calendarHeaderView: CalendarMonthHeaderView<HeaderView>, calendarDayView: CalendarDayView<CustomView>, calendarDayOfWeekInidcatorView: CalendarColumnDayOfWeekIndicatorView<DayOfWeekIndicatorView>, onSelection: ( (CalendarDay) -> Void)? = nil) {
         self.calendarMonth = calendarMonth
         self.calendarHeaderView = calendarHeaderView
         self.calendarDayView = calendarDayView
+        self.calendarDayOfWeekInidcatorView = calendarDayOfWeekInidcatorView
         self.onSelection = onSelection
     }
-
+    
     public var body: some View {
-            VStack(spacing: 0.0) {
-                headerView
-                daysView
-                    .padding()
-            }
+        VStack(spacing: 0.0) {
+            headerView
+            daysView
+                .padding()
+        }
     }
     
     @ViewBuilder
@@ -42,9 +44,17 @@ public struct CalendarMonthView<CustomView: View, HeaderView: View>: View {
         }
     }
     
+    @ViewBuilder
     private var daysOfWeek: some View {
         ForEach(DayOfWeek.allCases) { day in
-            Text("\(day.letter)")
+            switch self.calendarDayOfWeekInidcatorView {
+            case .custom(let customCalendarDayOFWeekIndicatorView):
+                customCalendarDayOFWeekIndicatorView(day)
+            case .singleLetter:
+                Text("\(day.letter)")
+            case .abreviated:
+                Text("\(day.abbreviated)")
+            }
         }
     }
     
@@ -56,7 +66,7 @@ public struct CalendarMonthView<CustomView: View, HeaderView: View>: View {
     public var offSet: Int {
         calendarMonth.startDate.monthStartOffset()
     }
-
+    
     @ViewBuilder
     public var daysView: some View {
         LazyVGrid(columns: Array(repeating: GridItem(), count: 7)) {
@@ -105,26 +115,26 @@ public struct CalendarMonthView<CustomView: View, HeaderView: View>: View {
         }
     }
     
-//    @ViewBuilder
-//    public func contributionDayView(calendarDay: CalendarDay, contributionType: ContributionType) -> some View {
-//        switch contributionType {
-//        case .count(let contributionConfig):
-//            ContributionDayView(calendarDay: calendarDay, contributionConfig: contributionConfig)
-//            
-//        case .percent(let contributionPercentConfig):
-//            completionGaugeView(calendarDay: calendarDay, contributionPercentConfig: contributionPercentConfig)
-//        }
-//    }
+    //    @ViewBuilder
+    //    public func contributionDayView(calendarDay: CalendarDay, contributionType: ContributionType) -> some View {
+    //        switch contributionType {
+    //        case .count(let contributionConfig):
+    //            ContributionDayView(calendarDay: calendarDay, contributionConfig: contributionConfig)
+    //
+    //        case .percent(let contributionPercentConfig):
+    //            completionGaugeView(calendarDay: calendarDay, contributionPercentConfig: contributionPercentConfig)
+    //        }
+    //    }
     
-//    private func completionGaugeView(calendarDay: CalendarDay, contributionPercentConfig: ContributionPercentConfig) -> some View {
-//        
-//        print("max: \(contributionPercentConfig.value)")
-//        print("\(calendarDay.date.formatted()) - \(calendarDay.sum)")
-//        return CompletionGaugeView(color: contributionPercentConfig.color, min: 0, max: contributionPercentConfig.value, value: calendarDay.sum)
-//            .background {
-//                if calendarDay.date.isToday {
-//                    Color.gray.opacity(0.35)
-//                }
-//            }
-//    }
+    //    private func completionGaugeView(calendarDay: CalendarDay, contributionPercentConfig: ContributionPercentConfig) -> some View {
+    //
+    //        print("max: \(contributionPercentConfig.value)")
+    //        print("\(calendarDay.date.formatted()) - \(calendarDay.sum)")
+    //        return CompletionGaugeView(color: contributionPercentConfig.color, min: 0, max: contributionPercentConfig.value, value: calendarDay.sum)
+    //            .background {
+    //                if calendarDay.date.isToday {
+    //                    Color.gray.opacity(0.35)
+    //                }
+    //            }
+    //    }
 }

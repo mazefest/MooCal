@@ -7,17 +7,19 @@
 
 import SwiftUI
 
-public struct ScrollableCalendarView<CustomView: View, HeaderView: View>: View {
+public struct ScrollableCalendarView<CustomView: View, HeaderView: View, DayOfWeekIndicatorView: View>: View {
     @ObservedObject var viewModel: ScrollableCalendarViewViewModel
     
     public var calendarHeaderView: CalendarMonthHeaderView<HeaderView>
     public var calendarDayView: CalendarDayView<CustomView>
+    public var calendarDayOfWeekInidcatorView: CalendarColumnDayOfWeekIndicatorView<DayOfWeekIndicatorView>
     public var onSelection: ((CalendarDay) -> ())?
     
-    public init(viewModel: ScrollableCalendarViewViewModel = ScrollableCalendarViewViewModel(), calendarHeaderView: CalendarMonthHeaderView<HeaderView> = .monthLabel(), calendarDayView: CalendarDayView<CustomView>, onSelection: ( (CalendarDay) -> Void)? = nil) {
+    public init(viewModel: ScrollableCalendarViewViewModel = ScrollableCalendarViewViewModel(), calendarHeaderView: CalendarMonthHeaderView<HeaderView> = .monthLabel(), calendarDayView: CalendarDayView<CustomView>, calendarDayOfWeekInidcatorView: CalendarColumnDayOfWeekIndicatorView<DayOfWeekIndicatorView> = .singleLetter, onSelection: ( (CalendarDay) -> Void)? = nil) {
         self.viewModel = viewModel
         self.calendarHeaderView = calendarHeaderView
         self.calendarDayView = calendarDayView
+        self.calendarDayOfWeekInidcatorView = calendarDayOfWeekInidcatorView
         self.onSelection = onSelection
     }
     
@@ -48,7 +50,8 @@ public struct ScrollableCalendarView<CustomView: View, HeaderView: View>: View {
                 CalendarYearViewMoo(
                     calendarMonths: viewModel.calendarMonths,
                     calendarHeaderView: calendarHeaderView,
-                    calendarDayView: calendarDayView,
+                    calendarDayView: calendarDayView, 
+                    calendarDayOfWeekInidcatorView: calendarDayOfWeekInidcatorView,
                     onSelection: onSelection
                 )
                 HStack {
