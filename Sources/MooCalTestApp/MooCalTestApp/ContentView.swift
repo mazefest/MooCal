@@ -67,9 +67,10 @@ struct ContentView: View {
         
         return ZStack {
             RoundedRectangle(cornerRadius: 10.0)
-                .foregroundStyle((isToday) ? Color.orange : Color.cyan)
+                .foregroundStyle((isToday) ? Color.orange : Color.gray)
+                .opacity(0.33)
             Text(calendarDay.descriptor) // The day number. ex: 11
-                .foregroundStyle(.black)
+                .foregroundStyle(.white)
                 .bold()
         }
         .aspectRatio(contentMode: .fit)
@@ -79,7 +80,7 @@ struct ContentView: View {
                 HStack {
                     ForEach(events) { event in
                         Circle()
-                            .foregroundStyle((isToday) ? .cyan : .orange)
+                            .foregroundStyle((isToday) ? .blue: .orange)
                             .frame(width: 5.0, height: 5.0)
                     }
                     Spacer()

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		778C95BA2B562BA2008A151C /* ContentViewTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778C95B92B562BA2008A151C /* ContentViewTwo.swift */; };
 		778C95BC2B562D8D008A151C /* ContentViewThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778C95BB2B562D8D008A151C /* ContentViewThree.swift */; };
+		779CE13E2C05234400E73E73 /* ContentViewFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779CE13D2C05234400E73E73 /* ContentViewFour.swift */; };
 		77D3E85F2B54DE5F00DEAC1E /* MooCalTestAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D3E85E2B54DE5F00DEAC1E /* MooCalTestAppApp.swift */; };
 		77D3E8612B54DE5F00DEAC1E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D3E8602B54DE5F00DEAC1E /* ContentView.swift */; };
 		77D3E8632B54DE6200DEAC1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77D3E8622B54DE6200DEAC1E /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		778C95B92B562BA2008A151C /* ContentViewTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewTwo.swift; sourceTree = "<group>"; };
 		778C95BB2B562D8D008A151C /* ContentViewThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewThree.swift; sourceTree = "<group>"; };
+		779CE13D2C05234400E73E73 /* ContentViewFour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentViewFour.swift; path = MooCalTestApp/ContentViewFour.swift; sourceTree = "<group>"; };
 		77D3E85B2B54DE5F00DEAC1E /* MooCalTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MooCalTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77D3E85E2B54DE5F00DEAC1E /* MooCalTestAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MooCalTestAppApp.swift; sourceTree = "<group>"; };
 		77D3E8602B54DE5F00DEAC1E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -48,6 +50,7 @@
 		77D3E8522B54DE5F00DEAC1E = {
 			isa = PBXGroup;
 			children = (
+				779CE13D2C05234400E73E73 /* ContentViewFour.swift */,
 				77D3E86C2B54DF2E00DEAC1E /* MooCal */,
 				77D3E85D2B54DE5F00DEAC1E /* MooCalTestApp */,
 				77D3E85C2B54DE5F00DEAC1E /* Products */,
@@ -183,6 +186,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				779CE13E2C05234400E73E73 /* ContentViewFour.swift in Sources */,
 				77D3E8612B54DE5F00DEAC1E /* ContentView.swift in Sources */,
 				77D3E8732B54E11600DEAC1E /* Event.swift in Sources */,
 				77D3E85F2B54DE5F00DEAC1E /* MooCalTestAppApp.swift in Sources */,

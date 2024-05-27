@@ -20,21 +20,9 @@ struct ContentViewTwo: View {
                 viewModel: viewModel,
                 calendarHeaderView: .custom({ calendarMonth in
                     HStack {
-                        VStack(alignment: .leading, spacing: 0.0) {
+                        Spacer()
                             Text(calendarMonth.title)
                                 .font(.system(.title2, design: .rounded, weight: .bold))
-                            
-                            HStack(spacing: 0.0) {
-                                Image(systemName: "arrow.up")
-                                    .font(.caption)
-                                    .foregroundStyle(.green)
-                                    .padding(4)
-                                    .bold()
-                                Text("$432.44")
-                                    .font(.caption)
-                                    .bold()
-                            }
-                        }
                         Spacer()
                     }
                     .padding(.leading)

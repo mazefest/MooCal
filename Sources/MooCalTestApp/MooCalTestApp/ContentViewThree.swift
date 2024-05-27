@@ -68,7 +68,8 @@ struct ContentViewThree: View {
         
         return ZStack {
             Circle()
-                .foregroundStyle((isToday) ? Color.blue: Color.gray.opacity(0.33))
+                .foregroundStyle((isToday) ? Color.green: Color.gray)
+                .opacity(0.33)
             Text(calendarDay.descriptor) // The day number. ex: 11
                 .font(.system(.body, design: .rounded, weight: .bold))
                 .foregroundStyle(.primary)
@@ -80,7 +81,7 @@ struct ContentViewThree: View {
                 HStack {
                     ForEach(events) { event in
                         Circle()
-                            .foregroundStyle((isToday) ? .cyan : .orange)
+                            .foregroundStyle((isToday) ? .pink: .orange)
                             .frame(width: 5.0, height: 5.0)
                     }
                     Spacer()
@@ -93,8 +94,6 @@ struct ContentViewThree: View {
     // Custom Day Of Week Indicator View
     private func customDayOfWeekIndicatorView(dayOfWeek: DayOfWeek) -> some View {
         ZStack {
-            Color.gray.opacity(0.33)
-                .cornerRadius(5.0)
             Text(dayOfWeek.abbreviated)
                 .font(.system(.body, design: .rounded, weight: .semibold))
         }
