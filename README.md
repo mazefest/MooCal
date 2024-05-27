@@ -135,7 +135,7 @@ If you want to have full control on the stlying of your calendar, checkout the b
 
 * [Customizing Month Header View](https://github.com/mazefest/MooCal/wiki/Customization#customizing-month-header-view)
 * [Customizing the Days Of Week Indicators](https://github.com/mazefest/MooCal/wiki/Customization#customizing-the-days-of-week-indicators)
-* [Customizing the Calendar Day]()
+* [Customizing the Calendar Day](https://github.com/mazefest/MooCal/wiki/Customization#customizing-calendar-days)
 
 
 # Further Implementation
