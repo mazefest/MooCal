@@ -128,6 +128,17 @@ This will be the result of the above code.
 
 <img src="ReadMeResources/Gif_CustomCalendar_Scroll.gif" width="200" alt="">
 
+# Further Customization
+If you want to have full control on the stlying of your calendar, checkout the below ways to style the calendar to your liking.
+labeledCustomizableViews
+
+<img src="ReadMeResources/labeledCustomizableViews.png" width="200" alt="">
+
+* [Customizing Month Header View](https://github.com/mazefest/MooCal/wiki/Customization#customizing-month-header-view)
+* [Customizing the Days Of Week Indicators](https://github.com/mazefest/MooCal/wiki/Customization#customizing-the-days-of-week-indicators)
+* [Customizing the Calendar Day]()
+
+
 # Further Implementation
 If you want to add more functionality to your calendar, make sure to take a look at our Wiki, there is a lot more functionality you can add very easily.
 
