@@ -130,7 +130,6 @@ This will be the result of the above code.
 
 # Further Customization
 If you want to have full control on the stlying of your calendar, checkout the below ways to style the calendar to your liking.
-labeledCustomizableViews
 
 <img src="ReadMeResources/labeledCustomizableViews.png" width="200" alt="">
 
