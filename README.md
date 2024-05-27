@@ -131,7 +131,7 @@ This will be the result of the above code.
 # Further Customization
 If you want to have full control on the stlying of your calendar, checkout the below ways to style the calendar to your liking.
 
-<img src="ReadMeResources/labeledCustomizableViews.png" width="200" alt="">
+<img src="ReadMeResources/labeledCustomizableViews.png" width="300" alt="">
 
 * [Customizing Month Header View](https://github.com/mazefest/MooCal/wiki/Customization#customizing-month-header-view)
 * [Customizing the Days Of Week Indicators](https://github.com/mazefest/MooCal/wiki/Customization#customizing-the-days-of-week-indicators)
