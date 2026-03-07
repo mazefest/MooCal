@@ -9,5 +9,4 @@ import Foundation
 
 public protocol CalendarData {
     var date: Date { get set }
-    //var value: Double { get set }
 }

@@ -47,8 +47,7 @@ public struct ClassicNumberedDayView: View {
     }
 }
 
-@available(iOS 16.0, *)
-public struct ClassicCalendarDayView/*<T: ClassicCalendarData & Identifiable>*/: View {
+public struct ClassicCalendarDayView: View {
     public var day: CalendarDay
     public var items: [any ClassicCalendarData]
     
@@ -68,10 +67,6 @@ public struct ClassicCalendarDayView/*<T: ClassicCalendarData & Identifiable>*/:
                             .foregroundStyle(.white)
                     }
                     .padding(.trailing, 4)
-//
-//                    ForEach(0..<items.count) { i in
-//                            calendarListItem(item: items[i])
-//                    }
                     ForEach(items, id: \.id) { item in
                         calendarListItem(item: item)
                     }
@@ -96,33 +91,6 @@ public struct ClassicCalendarDayView/*<T: ClassicCalendarData & Identifiable>*/:
                 .font(.custom("", size: 5))
             Spacer()
         }
-        //.padding(.horizontal, 2)
     }
 }
-
-//#Preview {
-//    let startOfMonth = Date().startOfMonth()
-//    let dates = startOfMonth.getAllDatesInMonth()
-//    let data = dates.compactMap({$0.getRandomEvent()})
-//    let calendarDays = startOfMonth.getAllDatesInMonth().compactMap({
-//        CalendarDay(date: $0, data: [])
-//    })
-//    
-//    return CalendarMonthView(
-//        calendarMonth: .init(startDate: startOfMonth, days: calendarDays)) { day in
-//            let items = data.filter({$0.date.isInDay(day.date)})
-//            
-//            return ZStack {
-//                Color.red
-//                    .clipShape(Circle())
-//                    .cornerRadius(10.0)
-//                    .frame(width: 50.0, height: 50.0)
-//                Text(day.descriptor)
-//                    .foregroundStyle(.white)
-//                    .bold()
-//            }
-//    } onSelection: { selectedDay in
-//        //
-//    }
-//}
 

@@ -12,14 +12,14 @@ public struct ScrollableCalendarView<CustomView: View, HeaderView: View, DayOfWe
     
     public var calendarHeaderView: CalendarMonthHeaderView<HeaderView>
     public var calendarDayView: CalendarDayView<CustomView>
-    public var calendarDayOfWeekInidcatorView: CalendarDayOfWeekIndicatorView<DayOfWeekIndicatorView>
+    public var calendarDayOfWeekIndicatorView: CalendarDayOfWeekIndicatorView<DayOfWeekIndicatorView>
     public var onSelection: ((CalendarDay) -> ())?
     
-    public init(viewModel: ScrollableCalendarViewViewModel = ScrollableCalendarViewViewModel(), calendarHeaderView: CalendarMonthHeaderView<HeaderView> = .monthLabel(), calendarDayView: CalendarDayView<CustomView>, calendarDayOfWeekInidcatorView: CalendarDayOfWeekIndicatorView<DayOfWeekIndicatorView> = .singleLetter(), onSelection: ( (CalendarDay) -> Void)? = nil) {
+    public init(viewModel: ScrollableCalendarViewViewModel = ScrollableCalendarViewViewModel(), calendarHeaderView: CalendarMonthHeaderView<HeaderView> = .monthLabel(), calendarDayView: CalendarDayView<CustomView>, calendarDayOfWeekIndicatorView: CalendarDayOfWeekIndicatorView<DayOfWeekIndicatorView> = .singleLetter(), onSelection: ( (CalendarDay) -> Void)? = nil) {
         self.viewModel = viewModel
         self.calendarHeaderView = calendarHeaderView
         self.calendarDayView = calendarDayView
-        self.calendarDayOfWeekInidcatorView = calendarDayOfWeekInidcatorView
+        self.calendarDayOfWeekIndicatorView = calendarDayOfWeekIndicatorView
         self.onSelection = onSelection
     }
     
@@ -47,11 +47,11 @@ public struct ScrollableCalendarView<CustomView: View, HeaderView: View, DayOfWe
                 .listRowBackground(Color.clear)
                 .padding(.vertical, 20)
                 
-                CalendarYearViewMoo(
+                CalendarMonthsView(
                     calendarMonths: viewModel.calendarMonths,
                     calendarHeaderView: calendarHeaderView,
                     calendarDayView: calendarDayView, 
-                    calendarDayOfWeekInidcatorView: calendarDayOfWeekInidcatorView,
+                    calendarDayOfWeekIndicatorView: calendarDayOfWeekIndicatorView,
                     onSelection: onSelection
                 )
                 HStack {
@@ -107,7 +107,7 @@ public class ScrollableCalendarViewViewModel: ObservableObject {
             return
         }
         let date = month.startDate
-        let newDate = date.modified(by: action.incrementor, component: .month)
+        let newDate = date.changed(by: action.incrementor, component: .month)
         let newMonth = CalendarMonth.createCalendarMonth(fromMonthStartDate: newDate, data: [])
         
         switch action {
@@ -123,7 +123,7 @@ public class ScrollableCalendarViewViewModel: ObservableObject {
             return
         }
         let date = month.startDate
-        let newDate = date.modified(by: action.incrementor, component: .month)
+        let newDate = date.changed(by: action.incrementor, component: .month)
         let newMonth = CalendarMonth.createCalendarMonth(fromMonthStartDate: newDate, data: data)
         
         switch action {
@@ -158,6 +158,3 @@ public class ScrollableCalendarViewViewModel: ObservableObject {
     }
 }
 
-//#Preview {
-//    SwiftUIView()
-//}

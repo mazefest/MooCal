@@ -10,5 +10,5 @@ import SwiftUI
 public enum CalendarDayOfWeekIndicatorView<DayOfWeekIndicatorView: View> {
     case custom((DayOfWeek) -> (DayOfWeekIndicatorView))
     case singleLetter(DayOfWeekIndicatorView = EmptyView())
-    case abreviated(DayOfWeekIndicatorView = EmptyView())
+    case abbreviated(DayOfWeekIndicatorView = EmptyView())
 }

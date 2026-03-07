@@ -11,14 +11,14 @@ public struct CalendarMonthView<CustomView: View, HeaderView: View, DayOfWeekInd
     public var calendarMonth: CalendarMonth
     public var calendarHeaderView: CalendarMonthHeaderView<HeaderView>
     public var calendarDayView: CalendarDayView<CustomView>
-    public var calendarDayOfWeekInidcatorView: CalendarDayOfWeekIndicatorView<DayOfWeekIndicatorView>
+    public var calendarDayOfWeekIndicatorView: CalendarDayOfWeekIndicatorView<DayOfWeekIndicatorView>
     public var onSelection: ((CalendarDay) -> ())?
     
-    public init(calendarMonth: CalendarMonth, calendarHeaderView: CalendarMonthHeaderView<HeaderView>, calendarDayView: CalendarDayView<CustomView>, calendarDayOfWeekInidcatorView: CalendarDayOfWeekIndicatorView<DayOfWeekIndicatorView>, onSelection: ( (CalendarDay) -> Void)? = nil) {
+    public init(calendarMonth: CalendarMonth, calendarHeaderView: CalendarMonthHeaderView<HeaderView>, calendarDayView: CalendarDayView<CustomView>, calendarDayOfWeekIndicatorView: CalendarDayOfWeekIndicatorView<DayOfWeekIndicatorView>, onSelection: ( (CalendarDay) -> Void)? = nil) {
         self.calendarMonth = calendarMonth
         self.calendarHeaderView = calendarHeaderView
         self.calendarDayView = calendarDayView
-        self.calendarDayOfWeekInidcatorView = calendarDayOfWeekInidcatorView
+        self.calendarDayOfWeekIndicatorView = calendarDayOfWeekIndicatorView
         self.onSelection = onSelection
     }
     
@@ -47,12 +47,12 @@ public struct CalendarMonthView<CustomView: View, HeaderView: View, DayOfWeekInd
     @ViewBuilder
     private var daysOfWeek: some View {
         ForEach(DayOfWeek.allCases) { day in
-            switch self.calendarDayOfWeekInidcatorView {
+            switch self.calendarDayOfWeekIndicatorView {
             case .custom(let customCalendarDayOFWeekIndicatorView):
                 customCalendarDayOFWeekIndicatorView(day)
             case .singleLetter:
                 Text("\(day.letter)")
-            case .abreviated:
+            case .abbreviated:
                 Text("\(day.abbreviated)")
             }
         }
@@ -115,26 +115,4 @@ public struct CalendarMonthView<CustomView: View, HeaderView: View, DayOfWeekInd
         }
     }
     
-    //    @ViewBuilder
-    //    public func contributionDayView(calendarDay: CalendarDay, contributionType: ContributionType) -> some View {
-    //        switch contributionType {
-    //        case .count(let contributionConfig):
-    //            ContributionDayView(calendarDay: calendarDay, contributionConfig: contributionConfig)
-    //
-    //        case .percent(let contributionPercentConfig):
-    //            completionGaugeView(calendarDay: calendarDay, contributionPercentConfig: contributionPercentConfig)
-    //        }
-    //    }
-    
-    //    private func completionGaugeView(calendarDay: CalendarDay, contributionPercentConfig: ContributionPercentConfig) -> some View {
-    //
-    //        print("max: \(contributionPercentConfig.value)")
-    //        print("\(calendarDay.date.formatted()) - \(calendarDay.sum)")
-    //        return CompletionGaugeView(color: contributionPercentConfig.color, min: 0, max: contributionPercentConfig.value, value: calendarDay.sum)
-    //            .background {
-    //                if calendarDay.date.isToday {
-    //                    Color.gray.opacity(0.35)
-    //                }
-    //            }
-    //    }
 }

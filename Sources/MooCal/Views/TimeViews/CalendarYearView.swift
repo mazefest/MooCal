@@ -7,18 +7,18 @@
 
 import SwiftUI
 
-public struct CalendarYearViewMoo<CustomView: View, HeaderView: View, DayOfWeekIndicatorView: View>: View {
+public struct CalendarMonthsView<CustomView: View, HeaderView: View, DayOfWeekIndicatorView: View>: View {
     public var calendarMonths: [CalendarMonth]
     public var calendarHeaderView: CalendarMonthHeaderView<HeaderView>
     public var calendarDayView: CalendarDayView<CustomView>
-    public var calendarDayOfWeekInidcatorView: CalendarDayOfWeekIndicatorView<DayOfWeekIndicatorView>
+    public var calendarDayOfWeekIndicatorView: CalendarDayOfWeekIndicatorView<DayOfWeekIndicatorView>
     public var onSelection: ((CalendarDay) -> ())?
     
-    public init(calendarMonths: [CalendarMonth], calendarHeaderView: CalendarMonthHeaderView<HeaderView>, calendarDayView: CalendarDayView<CustomView>, calendarDayOfWeekInidcatorView: CalendarDayOfWeekIndicatorView<DayOfWeekIndicatorView>, onSelection: ( (CalendarDay) -> Void)? = nil) {
+    public init(calendarMonths: [CalendarMonth], calendarHeaderView: CalendarMonthHeaderView<HeaderView>, calendarDayView: CalendarDayView<CustomView>, calendarDayOfWeekIndicatorView: CalendarDayOfWeekIndicatorView<DayOfWeekIndicatorView>, onSelection: ( (CalendarDay) -> Void)? = nil) {
         self.calendarMonths = calendarMonths
         self.calendarDayView = calendarDayView
         self.calendarHeaderView = calendarHeaderView
-        self.calendarDayOfWeekInidcatorView = calendarDayOfWeekInidcatorView
+        self.calendarDayOfWeekIndicatorView = calendarDayOfWeekIndicatorView
         self.onSelection = onSelection
     }
 
@@ -28,7 +28,7 @@ public struct CalendarYearViewMoo<CustomView: View, HeaderView: View, DayOfWeekI
                 calendarMonth: calendarMonth,
                 calendarHeaderView: calendarHeaderView,
                 calendarDayView: calendarDayView, 
-                calendarDayOfWeekInidcatorView: calendarDayOfWeekInidcatorView,
+                calendarDayOfWeekIndicatorView: calendarDayOfWeekIndicatorView,
                 onSelection: onSelection
             )
             .id(calendarMonth.id)

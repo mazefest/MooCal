@@ -23,7 +23,7 @@ struct ContentViewThree: View {
                     customCalendarDayView(calendarDay)
                     }
                 ),
-                calendarDayOfWeekInidcatorView: .custom({ dayOfWeek in
+                calendarDayOfWeekIndicatorView: .custom({ dayOfWeek in
                     customDayOfWeekIndicatorView(dayOfWeek: dayOfWeek)
                 })
             )

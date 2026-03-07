@@ -11,7 +11,7 @@ import SwiftUI
 import MooCal
 
 struct ContentViewFour: View {
-    @State var displayMode: WeaatherDisplayMode = .icon
+    @State var displayMode: WeatherDisplayMode = .icon
     @State var showingDisplaySelection: Bool = false
     
     var viewModel = ScrollableCalendarViewViewModel()
@@ -47,7 +47,7 @@ struct ContentViewFour: View {
     
     private func displayModeSelectionSheet() -> some View {
         List {
-            ForEach(WeaatherDisplayMode.allCases) { displayMode in
+            ForEach(WeatherDisplayMode.allCases) { displayMode in
                 Label(
                     title: { Text(displayMode.name) },
                     icon: { displayMode.image }
@@ -185,7 +185,7 @@ enum WeatherType {
 }
 
 // Display Modes for calendar
-enum WeaatherDisplayMode: String, CaseIterable, Identifiable {
+enum WeatherDisplayMode: String, CaseIterable, Identifiable {
     var id: Self { return self }
     
     case icon

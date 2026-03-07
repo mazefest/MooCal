@@ -291,21 +291,5 @@ extension Date {
         return monthDates
     }
     
-    func modified(by value: Int, component: Calendar.Component) -> Date {
-        var dateComponent = DateComponents()
-        switch component {
-        case .day:
-            dateComponent.day = value
-        case .month:
-            dateComponent.month = value
-        case .weekOfYear, .weekOfMonth:
-            dateComponent.weekOfYear = value
-        case .year:
-            dateComponent.year = value
-        default:
-            break
-        }
-        return Calendar.current.date(byAdding: dateComponent, to: self) ?? self
-    }
 }
 
