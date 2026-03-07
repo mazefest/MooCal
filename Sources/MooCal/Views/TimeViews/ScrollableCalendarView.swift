@@ -57,7 +57,7 @@ public struct ScrollableCalendarView<CustomView: View, HeaderView: View, DayOfWe
                 HStack {
                     Spacer()
                     Button(action: {
-                        viewModel.addMonth(.toBeginning)
+                        viewModel.addMonth(.toEnd)
                     }, label: {
                         VStack {
                             Text("See More")
@@ -67,7 +67,6 @@ public struct ScrollableCalendarView<CustomView: View, HeaderView: View, DayOfWe
                             Image(systemName: "arrow.down.circle.fill")
                                 .foregroundStyle(.secondary)
                                 .bold()
-                            //.font(.caption)
                         }
                     })
                     .listRowBackground(Color.clear)

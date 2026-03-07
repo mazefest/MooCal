@@ -278,12 +278,12 @@ extension Date {
         var monthDates: [Date] = [] // this is an array of dates starting at the first day of each month
         let todaysDateOfMonth = Date.firstDateOfMonth(of: start)
         
-        for i in 1..<preMonths{
+        for i in stride(from: 1, through: preMonths, by: 1) {
             let monthDate = todaysDateOfMonth.changed(by: (i * -1), component: .month)
             monthDates.insert(monthDate, at: 0)
         }
         monthDates.append(todaysDateOfMonth)
-        for i in 1..<postMonths{
+        for i in stride(from: 1, through: postMonths, by: 1) {
             let monthDate = todaysDateOfMonth.changed(by: (i), component: .month)
             monthDates.append(monthDate)
         }

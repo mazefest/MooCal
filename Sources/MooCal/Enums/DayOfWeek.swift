@@ -88,12 +88,18 @@ public enum DayOfWeek: String, Identifiable {
     }
     
     static public func create(from date: Date) -> Self {
-        let dayOfWeek = date.descriptor(.dayOfWeek)
-        for day in DayOfWeek.allCases {
-            if day.title == dayOfWeek {
-                return day
-            }
+        // Use numeric weekday component to avoid locale-dependent string matching.
+        // Calendar.current.firstWeekday is typically 1 (Sunday) or 2 (Monday).
+        // .weekday values: 1 = Sunday, 2 = Monday, ..., 7 = Saturday
+        let weekday = Calendar.current.component(.weekday, from: date)
+        switch weekday {
+        case 2: return .monday
+        case 3: return .tuesday
+        case 4: return .wednesday
+        case 5: return .thursday
+        case 6: return .friday
+        case 7: return .saturday
+        default: return .sunday
         }
-        fatalError()
     }
 }

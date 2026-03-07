@@ -60,7 +60,7 @@ public struct CalendarMonthView<CustomView: View, HeaderView: View, DayOfWeekInd
     
     var trailingEmptyDayCount: Int {
         let d = (offSet + calendarMonth.days.count) % 7
-        return 7 - d
+        return (7 - d) % 7
     }
     
     public var offSet: Int {
